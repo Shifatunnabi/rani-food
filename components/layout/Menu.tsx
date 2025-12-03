@@ -14,49 +14,75 @@ export default function Menu() {
     );
   };
 
+  // const menuItems = [
+  //   {
+  //     title: 'Home',
+  //     subMenu: []
+  //   },
+  //   {
+  //     title: 'Menu',
+  //     subMenu: [
+  //       { href: '/menu-v1', label: 'Menu List One' },
+  //       { href: '/menu-v2', label: 'Menu List Two' },
+  //       { href: '/menu-v3', label: 'Menu Grid' },
+  //       { href: '/menu-details', label: 'Menu Details' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Pages',
+  //     subMenu: [
+  //       { href: '/about', label: 'About Us' },
+  //       { href: '/history', label: 'Our History' },
+  //       { href: '/chefs', label: 'Our Chefs' },
+  //       { href: '/gallery', label: 'Our Gallery' },
+  //       { href: '/faq', label: 'Faqs' },
+  //       { href: '/404', label: 'Error 404' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Shop',
+  //     subMenu: [
+  //       { href: '/products', label: 'Our Shop' },
+  //       { href: '/menu-details', label: 'Product Details' },
+  //       { href: '/cart', label: 'Cart' },
+  //       { href: '/checkout', label: 'Checkout' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Blog',
+  //     subMenu: [
+  //       { href: '/blog-grid', label: 'Blog Grid' },
+  //       { href: '/blog-classic', label: 'Blog Standard' },
+  //       { href: '/blog-details', label: 'Blog Details' },
+  //     ],
+  //   },
+  //   { title: 'Contact', href: '/contact' },
+  // ];
   const menuItems = [
     {
       title: 'Home',
-      subMenu: []
+      href: "/"
     },
     {
-      title: 'Menu',
+      title: 'About us',
+      href: "/"
+    },
+    {
+      title: 'Products',
       subMenu: [
-        { href: '/menu-v1', label: 'Menu List One' },
-        { href: '/menu-v2', label: 'Menu List Two' },
-        { href: '/menu-v3', label: 'Menu Grid' },
-        { href: '/menu-details', label: 'Menu Details' },
+        { href: '/', label: 'Biscuits' },
+        { href: '', label: 'Cookies & Rusk' },
+        { href: '/', label: 'Cake' },
+        { href: '/', label: 'Snacks' },
+        { href: '/', label: 'Bevarage' },
+        { href: '/', label: 'Grocery Items' },
       ],
     },
     {
-      title: 'Pages',
-      subMenu: [
-        { href: '/about', label: 'About Us' },
-        { href: '/history', label: 'Our History' },
-        { href: '/chefs', label: 'Our Chefs' },
-        { href: '/gallery', label: 'Our Gallery' },
-        { href: '/faq', label: 'Faqs' },
-        { href: '/404', label: 'Error 404' },
-      ],
+      title: 'Media',
+      href : "/"
     },
-    {
-      title: 'Shop',
-      subMenu: [
-        { href: '/products', label: 'Our Shop' },
-        { href: '/menu-details', label: 'Product Details' },
-        { href: '/cart', label: 'Cart' },
-        { href: '/checkout', label: 'Checkout' },
-      ],
-    },
-    {
-      title: 'Blog',
-      subMenu: [
-        { href: '/blog-grid', label: 'Blog Grid' },
-        { href: '/blog-classic', label: 'Blog Standard' },
-        { href: '/blog-details', label: 'Blog Details' },
-      ],
-    },
-    { title: 'Contact', href: '/contact' },
+    { title: 'Contact', href: '/' },
   ];
 
   return (

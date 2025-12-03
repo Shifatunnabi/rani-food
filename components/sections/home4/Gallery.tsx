@@ -8,10 +8,10 @@ import 'swiper/css/navigation';
 import Link from 'next/link';
 
 const galleryImages = [
-  "assets/images/gallery/gallery-11.jpg",
-  "assets/images/gallery/gallery-12.jpg",
-  "assets/images/gallery/gallery-13.jpg",
-  "assets/images/gallery/gallery-12.jpg",
+  "assets/images/gallery/11.jpg",
+  "assets/images/gallery/22.jpg",
+  "assets/images/gallery/33.jpg",
+  "assets/images/gallery/44.jpg",
 ];
 
 const GallerySection = () => {
@@ -35,7 +35,7 @@ const GallerySection = () => {
             </div>
             <div className="col-lg-5">
               <div className="circle-button float-lg-end mb-50 wow fadeInRight">
-                <Link href="/gallery" className="circle-btn">
+                <Link href="/" className="circle-btn">
                   <span>View All</span>
                   <i className="far fa-arrow-right"></i>
                 </Link>

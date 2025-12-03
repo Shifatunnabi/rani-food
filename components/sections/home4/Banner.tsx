@@ -43,7 +43,7 @@ const HeroSection = () => {
                   tells a story of passion and flavor.
                 </p>
                 <div className="hero-button wow fadeInDown" data-wow-delay=".7s">
-                  <Link href="/contact" className="theme-btn style-one">
+                  <Link href="/" className="theme-btn style-one">
                     Contact Us
                   </Link>
                 </div>

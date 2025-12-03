@@ -1110,11 +1110,13 @@ ul.slick-dots li.slick-active button {
   border-radius: 10px;
   margin-left: 20px;
   cursor: pointer;
+  font-size: 28px;
 }
 @media (max-width: 1199px) {
   .nav-right-item .cart-button {
     width: 40px;
     height: 40px;
+    font-size: 20px;
   }
 }
 
@@ -2562,7 +2564,7 @@ ul.slick-dots li.slick-active button {
   transition: all 0.3s ease-out 0s;
 }
 .menu-item.style-six:hover {
-  border-color: var(--secondary-color);
+  border-color: var(--primary-color);
 }
 .menu-item.style-six .menu-thumbnail {
   margin-bottom: 40px;
@@ -2570,6 +2572,28 @@ ul.slick-dots li.slick-active button {
 .menu-item.style-six .menu-thumbnail img {
   min-height: 250px;
   max-height: 250px;
+}
+@media (max-width: 767px) {
+  .menu-item.style-six {
+    padding: 15px;
+  }
+  .menu-item.style-six .menu-thumbnail {
+    margin-bottom: 20px;
+  }
+  .menu-item.style-six .menu-thumbnail img {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .menu-item.style-six .menu-info h3.title {
+    font-size: 18px;
+  }
+  .menu-item.style-six .menu-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .menu-item.style-six .menu-info .price {
+    font-size: 20px;
+  }
 }
 .menu-item.style-six .menu-info h3.title {
   margin-bottom: 15px;
@@ -3060,18 +3084,30 @@ ul.slick-dots li.slick-active button {
 }
 .foodix-banner-item.style-three .banner-inner-wrap .banner-img {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: -20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+}
+.foodix-banner-item.style-three .banner-inner-wrap .banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media (max-width: 991px) {
   .foodix-banner-item.style-three .banner-inner-wrap .banner-img {
-    width: 50%;
-    text-align: right;
+    width: 160px;
+    height: 160px;
+    top: -15px;
+    right: 15px;
   }
 }
 @media (max-width: 767px) {
   .foodix-banner-item.style-three .banner-inner-wrap .banner-img {
-    display: none;
+    width: 120px;
+    height: 120px;
+    top: -10px;
+    right: 10px;
   }
 }
 .foodix-banner-item.style-three .banner-inner-wrap .banner-content span {

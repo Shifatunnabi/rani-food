@@ -171,13 +171,13 @@ const MenuSection = () => {
                             </div>
                             <div className="menu-info">
                               <h3 className="title">
-                                <Link href="/menu-details">{title}</Link>
+                                <Link href="/">{title}</Link>
                               </h3>
                               <p>{description}</p>
-                              <p className="price">
+                              {/* <p className="price">
                                 <span className="currency">$</span>
                                 {price}
-                              </p>
+                              </p> */}
                             </div>
                           </div>
                         </div>

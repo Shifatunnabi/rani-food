@@ -43,7 +43,7 @@ export default function Footer({ paddingClass = 'pt-120 pb-75' }: FooterProps) {
                   <div className="footer-logo mb-25">
                     <Link href="/">
                       <Image
-                        src="/assets/images/logo/logo-white.png"
+                        src="/assets/images/logo/logo.png"
                         alt="Brand Logo"
                         width={150}
                         height={50}
@@ -52,8 +52,7 @@ export default function Footer({ paddingClass = 'pt-120 pb-75' }: FooterProps) {
                     </Link>
                   </div>
                   <p>
-                    Discover culinary delights, recipes and inspiration in our delightful food
-                    haven.
+                    Savor the perfection of our culinary creations, where every bite tells a story of passion and flavor.
                   </p>
                   <ul className="social-link">
                     <li>
@@ -87,12 +86,12 @@ export default function Footer({ paddingClass = 'pt-120 pb-75' }: FooterProps) {
                 <div className="widget-content">
                   <h4 className="widget-title">Contact Us</h4>
                   <ul className="address-list">
-                    <li>1901 Thornridge Cir. Shiloh, Hawaii 81063</li>
+                    <li>House-30, Road-4, Block-C, Banani, Dhaka-1213, Bangladesh.</li>
                     <li>
-                      <Link href="tel:+88-344-667-999">+88-344-667-999</Link>
+                      <Link href="tel:+88-344-667-999">+88029822768</Link>
                     </li>
                     <li>
-                      <Link href="mailto:order@foodix.com">order@foodix.com</Link>
+                      <Link href="mailto:order@foodix.com">info@ranifood.com.bd</Link>
                     </li>
                   </ul>
                 </div>
@@ -109,16 +108,16 @@ export default function Footer({ paddingClass = 'pt-120 pb-75' }: FooterProps) {
                       <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link href="/about">About Us</Link>
+                      <Link href="/">About Us</Link>
                     </li>
                     <li>
-                      <Link href="/menu-v1">Services</Link>
+                      <Link href="/">Services</Link>
                     </li>
                     <li>
-                      <Link href="/menu-v3">Our Menu</Link>
+                      <Link href="/">Our Menu</Link>
                     </li>
                     <li>
-                      <Link href="/gallery">Gallery</Link>
+                      <Link href="/">Gallery</Link>
                     </li>
                   </ul>
                 </div>
@@ -158,7 +157,7 @@ export default function Footer({ paddingClass = 'pt-120 pb-75' }: FooterProps) {
       <div className="copyright-area text-center">
         <div className="container">
           <div className="copyright-text">
-            <p>&copy; {year || '2025'} Foodix. All rights reserved.</p>
+            <p>&copy; {year || '2025'} Rani Food Industries Ltd. All rights reserved.</p>
           </div>
         </div>
       </div>

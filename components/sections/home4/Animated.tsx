@@ -9,9 +9,9 @@ export default function AnimatedHeadline() {
         <div className="animated-wrap flex animate-marquee whitespace-nowrap">
           {[...Array(3)].map((_, index) => (
             <div key={index} className="animated-inner flex mr-10">
-              {[...Array(3)].map((_, i) => (
+              {[...Array(60)].map((_, i) => (
                 <span key={i} className="animated-list-item mx-6 text-lg font-semibold flex items-center gap-2">
-                  Exquisite Four-Cheese Delight Pizza
+                  Rani Food Industries Ltd
                   <i className="far fa-asterisk text-yellow-400"></i>
                 </span>
               ))}

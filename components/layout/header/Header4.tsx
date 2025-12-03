@@ -71,7 +71,7 @@ export default function Header({
                     <div className="mobile-logo mb-30 d-block d-xl-none text-center">
                       <Link href="/" className="brand-logo">
                         <Image
-                          src="/assets/images/logo/logo-main.png"
+                          src="/assets/images/logo/logo.png"
                           alt="Logo"
                           width={150}
                           height={40}
@@ -85,12 +85,12 @@ export default function Header({
                 {/*=== Nav Right ===*/}
                 <div className="nav-right-item">
                   <div className="nav-button d-none d-xl-block">
-                    <Link href="/contact" className="theme-btn style-one">
+                    <Link href="/" className="theme-btn style-one">
                       Get in touch
                     </Link>
                   </div>
-                  <Link href="/cart" className="cart-button">
-                    <i className="far fa-shopping-cart"></i>
+                  <Link href="https://wa.me/" className="cart-button" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-whatsapp"></i>
                   </Link>
 
                   {/*=== Mobile Toggle ===*/}

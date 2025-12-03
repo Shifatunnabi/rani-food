@@ -18,12 +18,12 @@ const BannerSection = () => {
                 </div>
                 <div className="banner-content">
                   
-                  <h3>Rani </h3>
+                  <h3>Rani Food</h3>
                   <span className="">Pure Ground Spices</span>
                   <p>
                     Hygienically processed turmeric and spices, saving time while delivering authentic taste to your kitchen.
                   </p>
-                  <Link href="/contact" className="theme-btn style-one">
+                  <Link href="/" className="theme-btn style-one">
                     View Products
                   </Link>
                 </div>
@@ -48,7 +48,7 @@ const BannerSection = () => {
                   <p>
                   Innovative potato chips and fried peas with unique flavors. Known for the real taste of potato in crunchy, irresistible forms.
                   </p>
-                  <Link href="/contact" className="theme-btn style-one">
+                  <Link href="/" className="theme-btn style-one">
                     View Products
                   </Link>
                 </div>
@@ -72,7 +72,7 @@ const BannerSection = () => {
                   <p>
                    High quality, delicious biscuits and cookies with an extensive range of flavors including butter toast, cream cookies, and chocolate delights.
                   </p>
-                  <Link href="/contact" className="theme-btn style-one">
+                  <Link href="/" className="theme-btn style-one">
                     View Products
                   </Link>
                 </div>
