@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,34 +11,58 @@ interface AdData {
 }
 
 const ads: AdData[] = [
-  { id: 1, image: '/assets/images/popup/ad1.png', link: '/products', alt: 'Special Offer 1' },
-  { id: 2, image: '/assets/images/popup/ad2.jpg', link: '/products', alt: 'Special Offer 2' },
-  { id: 3, image: '/assets/images/popup/ad3.png', link: '/products', alt: 'Special Offer 3' },
-  { id: 4, image: '/assets/images/popup/ad4.jpg', link: '/products', alt: 'Special Offer 4' },
+  { id: 1, image: '/assets/images/popup/1.png', link: '/products', alt: 'Special Offer 1' },
+  { id: 2, image: '/assets/images/popup/2.jpg', link: '/products', alt: 'Special Offer 2' },
+  { id: 3, image: '/assets/images/popup/3.png', link: '/products', alt: 'Special Offer 3' },
+  { id: 4, image: '/assets/images/popup/4.jpg', link: '/products', alt: 'Special Offer 4' },
+  { id: 5, image: '/assets/images/popup/5.png', link: '/products', alt: 'Special Offer 5' },
+  { id: 6, image: '/assets/images/popup/6.png', link: '/products', alt: 'Special Offer 6' },
+  { id: 7, image: '/assets/images/popup/7.png', link: '/products', alt: 'Special Offer 7' },
+  { id: 8, image: '/assets/images/popup/8.png', link: '/products', alt: 'Special Offer 8' },
+  { id: 9, image: '/assets/images/popup/9.png', link: '/products', alt: 'Special Offer 9' },
+  { id: 10, image: '/assets/images/popup/10.png', link: '/products', alt: 'Special Offer 10' },
 ];
 
 export default function PopupAd() {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentAd, setCurrentAd] = useState<AdData | null>(null);
+  const [currentAdIndex, setCurrentAdIndex] = useState(0);
   const [isClosing, setIsClosing] = useState(false);
 
-  // Get a random ad
-  const getRandomAd = useCallback(() => {
-    const randomIndex = Math.floor(Math.random() * ads.length);
-    return ads[randomIndex];
-  }, []);
-
-  // Show popup after 5 seconds on page load
+  // Show popup sequentially
   useEffect(() => {
-    // Set initial random ad
-    setCurrentAd(getRandomAd());
+    let popupTimer: NodeJS.Timeout;
+    let showTimer: NodeJS.Timeout;
 
-    const timer = setTimeout(() => {
+    const showNextPopup = () => {
       setIsVisible(true);
-    }, 5000); // 5 seconds delay
+      
+      // Auto-close and show next popup after 5 seconds
+      popupTimer = setTimeout(() => {
+        setIsClosing(true);
+        setTimeout(() => {
+          setIsVisible(false);
+          setIsClosing(false);
+          setCurrentAdIndex((prevIndex) => (prevIndex + 1) % ads.length);
+          
+          // Show next popup after 5 seconds
+          showTimer = setTimeout(() => {
+            showNextPopup();
+          }, 10000);
+        }, 300);
+      }, 10000);
+    };
 
-    return () => clearTimeout(timer);
-  }, [getRandomAd]);
+    // Initial popup after 5 seconds
+    const initialTimer = setTimeout(() => {
+      showNextPopup();
+    }, 2000);
+
+    return () => {
+      clearTimeout(initialTimer);
+      clearTimeout(popupTimer);
+      clearTimeout(showTimer);
+    };
+  }, []);
 
   // Prevent scrolling when popup is visible
   useEffect(() => {
@@ -69,7 +93,9 @@ export default function PopupAd() {
     }
   };
 
-  if (!isVisible || !currentAd) return null;
+  if (!isVisible) return null;
+
+  const currentAd = ads[currentAdIndex];
 
   return (
     <>

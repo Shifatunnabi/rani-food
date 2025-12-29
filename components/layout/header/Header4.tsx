@@ -644,7 +644,7 @@ export default function Header({
           <div className="navbar-container">
             <div className="top-bar-content">
               <a
-                href="/assets/brochure/Mondelez-Catalogue.pdf"
+                href="/assets/brochure/Catalog.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="brochure-btn"
