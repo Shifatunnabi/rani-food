@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Header4 from "./header/Header4";
+import PopupAd from "../elements/PopupAd";
 
 interface LayoutClientFeaturesProps {
   headerStyle?: 1 | 2 | 3 | 4;
@@ -46,5 +47,10 @@ export default function LayoutClientFeatures({ headerStyle }: LayoutClientFeatur
     }
   };
 
-  return <>{renderHeader()}</>;
+  return (
+    <>
+      {renderHeader()}
+      <PopupAd />
+    </>
+  );
 }
