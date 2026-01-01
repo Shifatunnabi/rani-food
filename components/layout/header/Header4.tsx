@@ -153,9 +153,10 @@ export default function Header({
 
         .top-bar-content {
           display: flex;
-          justify-content: flex-end;
+          justify-content: space-between;
           align-items: center;
           gap: 20px;
+          position: relative;
         }
 
         .brochure-btn {
@@ -170,6 +171,9 @@ export default function Header({
           border: none;
           cursor: pointer;
           text-decoration: none;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         .brochure-btn:hover {
@@ -187,6 +191,7 @@ export default function Header({
         .social-icons {
           display: flex;
           gap: 15px;
+          margin-left: auto;
         }
 
         .social-icons a {
@@ -390,7 +395,10 @@ export default function Header({
         .mobile-right {
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          flex: 1;
           gap: 15px;
+          position: relative;
         }
 
         .mobile-brochure-btn {
@@ -401,6 +409,9 @@ export default function Header({
           gap: 5px;
           text-decoration: none;
           white-space: nowrap;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         .mobile-brochure-btn:hover,
@@ -414,6 +425,7 @@ export default function Header({
         .mobile-social-icons {
           display: flex;
           gap: 10px;
+          margin-left: auto;
         }
 
         .mobile-social-icons a {
@@ -649,7 +661,7 @@ export default function Header({
                 rel="noopener noreferrer"
                 className="brochure-btn"
               >
-                <i className="fas fa-file-pdf"></i>
+                <i className="fas fa-download"></i>
                 Product Catalog
               </a>
               <div className="social-icons">
@@ -673,6 +685,20 @@ export default function Header({
         <div className="middle-bar">
           <div className="navbar-container">
             <div className="middle-bar-content">
+
+
+              <div className={`logo-wrapper center-logo ${logoAnimated ? 'animated' : ''}`}>
+                <Link href="/">
+                  <Image
+                    src="/assets/images/logo/rani.png"
+                    alt="Rani Food"
+                    width={180}
+                    height={80}
+                    priority
+                  />
+                </Link>
+              </div>
+
               <div className={`logo-wrapper left-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
@@ -684,17 +710,7 @@ export default function Header({
                   />
                 </Link>
               </div>
-              <div className={`logo-wrapper center-logo ${logoAnimated ? 'animated' : ''}`}>
-                <Link href="/">
-                  <Image
-                    src="/assets/images/logo/logo.png"
-                    alt="Rani Food"
-                    width={180}
-                    height={60}
-                    priority
-                  />
-                </Link>
-              </div>
+
               <div className={`logo-wrapper right-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
@@ -771,7 +787,7 @@ export default function Header({
                 rel="noopener noreferrer"
                 className="mobile-brochure-btn"
               >
-                <i className="fas fa-file-pdf"></i>
+                <i className="fas fa-download"></i>
                 <span>Product Catalog</span>
               </a>
               <div className="mobile-social-icons">
@@ -797,8 +813,8 @@ export default function Header({
             <div className={`mobile-logo-wrapper ${logoAnimated ? 'animated' : ''}`}>
               <Link href="/">
                 <Image
-                  src="/assets/images/logo/goldmark.png"
-                  alt="Goldmark"
+                  src="/assets/images/logo/rani.png"
+                  alt="Rani Food"
                   width={80}
                   height={35}
                   priority
@@ -808,8 +824,8 @@ export default function Header({
             <div className={`mobile-logo-wrapper ${logoAnimated ? 'animated' : ''}`}>
               <Link href="/">
                 <Image
-                  src="/assets/images/logo/logo.png"
-                  alt="Rani Food"
+                  src="/assets/images/logo/goldmark.png"
+                  alt="Goldmark"
                   width={100}
                   height={35}
                   priority
@@ -840,14 +856,14 @@ export default function Header({
       {/* Mobile Sidebar */}
       <nav className={`mobile-sidebar ${isSidebarOpen ? 'active' : ''}`}>
         <div className="sidebar-header">
-          <div className="sidebar-logo">
+          {/* <div className="sidebar-logo">
             <Image
-              src="/assets/images/logo/logo.png"
+              src="/assets/images/logo/rani.png"
               alt="Rani Food"
               width={120}
               height={40}
             />
-          </div>
+          </div> */}
           <button className="sidebar-close" onClick={closeSidebar} aria-label="Close menu">
             <i className="fas fa-times"></i>
           </button>

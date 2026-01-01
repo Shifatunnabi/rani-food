@@ -12,56 +12,26 @@ interface AdData {
 
 const ads: AdData[] = [
   { id: 1, image: '/assets/images/popup/1.png', link: '/products', alt: 'Special Offer 1' },
-  { id: 2, image: '/assets/images/popup/2.jpg', link: '/products', alt: 'Special Offer 2' },
-  { id: 3, image: '/assets/images/popup/3.png', link: '/products', alt: 'Special Offer 3' },
-  { id: 4, image: '/assets/images/popup/4.jpg', link: '/products', alt: 'Special Offer 4' },
-  { id: 5, image: '/assets/images/popup/5.png', link: '/products', alt: 'Special Offer 5' },
-  { id: 6, image: '/assets/images/popup/6.png', link: '/products', alt: 'Special Offer 6' },
-  { id: 7, image: '/assets/images/popup/7.png', link: '/products', alt: 'Special Offer 7' },
-  { id: 8, image: '/assets/images/popup/8.png', link: '/products', alt: 'Special Offer 8' },
-  { id: 9, image: '/assets/images/popup/9.png', link: '/products', alt: 'Special Offer 9' },
-  { id: 10, image: '/assets/images/popup/10.png', link: '/products', alt: 'Special Offer 10' },
 ];
 
 export default function PopupAd() {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentAdIndex, setCurrentAdIndex] = useState(0);
   const [isClosing, setIsClosing] = useState(false);
 
-  // Show popup sequentially
+  // Show popup only once on initial load
   useEffect(() => {
-    let popupTimer: NodeJS.Timeout;
-    let showTimer: NodeJS.Timeout;
+    // Check if popup was already shown in this session
+    const hasShownPopup = sessionStorage.getItem('popupShown');
+    
+    if (!hasShownPopup) {
+      // Show popup after 2 seconds
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        sessionStorage.setItem('popupShown', 'true');
+      }, 2000);
 
-    const showNextPopup = () => {
-      setIsVisible(true);
-      
-      // Auto-close and show next popup after 5 seconds
-      popupTimer = setTimeout(() => {
-        setIsClosing(true);
-        setTimeout(() => {
-          setIsVisible(false);
-          setIsClosing(false);
-          setCurrentAdIndex((prevIndex) => (prevIndex + 1) % ads.length);
-          
-          // Show next popup after 5 seconds
-          showTimer = setTimeout(() => {
-            showNextPopup();
-          }, 10000);
-        }, 300);
-      }, 10000);
-    };
-
-    // Initial popup after 5 seconds
-    const initialTimer = setTimeout(() => {
-      showNextPopup();
-    }, 2000);
-
-    return () => {
-      clearTimeout(initialTimer);
-      clearTimeout(popupTimer);
-      clearTimeout(showTimer);
-    };
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // Prevent scrolling when popup is visible
@@ -95,7 +65,7 @@ export default function PopupAd() {
 
   if (!isVisible) return null;
 
-  const currentAd = ads[currentAdIndex];
+  const currentAd = ads[0];
 
   return (
     <>
@@ -123,8 +93,8 @@ export default function PopupAd() {
         .popup-container {
           position: relative;
           width: 90%;
-          max-width: 480px;
-          aspect-ratio: 1 / 1;
+          max-width: 700px;
+          aspect-ratio: 7 / 5;
           background: white;
           border-radius: 12px;
           overflow: hidden;
@@ -234,7 +204,7 @@ export default function PopupAd() {
         @media (max-width: 576px) {
           .popup-container {
             width: 88%;
-            max-width: 360px;
+            max-width: none;
           }
 
           .popup-close-btn {
@@ -258,7 +228,7 @@ export default function PopupAd() {
 
         @media (min-width: 768px) {
           .popup-container {
-            max-width: 420px;
+            max-width: 800px;
           }
         }
       `}</style>

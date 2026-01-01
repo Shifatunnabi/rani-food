@@ -3,6 +3,7 @@ import LayoutClientFeatures from "./LayoutClientFeatures";
 import Breadcrumb from "./Breadcrumb";
 import Footer1 from "./footer/Footer1";
 import DataBg from "../elements/DataBg";
+import FixedNewsMarquee from "../elements/FixedNewsMarquee";
 
 import Header4 from "./header/Header4";
 
@@ -45,6 +46,9 @@ export default function Layout({
 
         {/* Footer */}
         {renderFooter()}
+        
+        {/* Fixed News Marquee */}
+        <FixedNewsMarquee />
       </div>
     </>
   );

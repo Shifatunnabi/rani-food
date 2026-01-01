@@ -14,7 +14,7 @@ const BannerSection = () => {
                 style={{ backgroundImage: "url(assets/images/bg/banner-bg-4.jpg)" }}
               >
                 <div className="banner-img">
-                  <img src="assets/images/logo/logo.png" alt="banner image" />
+                  <img src="assets/images/logo/rani.png" alt="banner image" />
                 </div>
                 <div className="banner-content">
                   
