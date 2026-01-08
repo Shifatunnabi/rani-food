@@ -38,8 +38,8 @@ export default function Layout({
         {/* Client header features */}
         <LayoutClientFeatures headerStyle={headerStyle} />
 
-        {/* Optional breadcrumb */}
-        {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+        {/* Optional breadcrumb 
+        {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}*/}
 
         {/* Page content */}
         {children}

@@ -106,8 +106,8 @@ export default function Header({
     {
       title: 'Career',
       dropdown: [
-        { label: 'Factory Internships', href: '/career/internships' },
-        { label: 'Job Openings', href: '/career/jobs' },
+        { label: 'Factory Internships', href: '/career/factory-internship' },
+        { label: 'Job Openings', href: '/career/job-opening' },
       ],
     },
     { title: 'Contact Us', href: '/contact' },
@@ -211,6 +211,7 @@ export default function Header({
           padding: 15px 0;
           border-left: 4px solid #BF1109;
           border-right: 4px solid #BF1109;
+          border-bottom: 4px solid #c41e3a;
         }
 
         .middle-bar-content {
