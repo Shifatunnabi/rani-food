@@ -96,13 +96,14 @@ const HeroSection = () => {
           padding: 0;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-end;
           opacity: 0;
           transform: translateY(30px);
           transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
           transition-delay: 0.2s;
           overflow: hidden;
-          margin-right: 40px;
+          margin-right: 0;
+          margin-left: 60px;
         }
 
         .image-box.visible {
@@ -112,28 +113,17 @@ const HeroSection = () => {
 
         .image-box img {
           width: 100%;
+          max-width: 650px;
           height: auto;
-          max-height: 600px;
+          aspect-ratio: 1 / 1;
           object-fit: cover;
           display: block;
           border-radius: 10px;
-          animation: pulse-light 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse-light {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.02);
-            opacity: 0.95;
-          }
         }
 
         @media (max-width: 1200px) {
           .image-box img {
-            max-height: 500px;
+            max-width: 550px;
           }
         }
 
@@ -146,10 +136,12 @@ const HeroSection = () => {
           .image-box {
             order: -1;
             margin-right: 0;
+            margin-left: 0;
+            justify-content: center;
           }
 
           .image-box img {
-            max-height: 400px;
+            max-width: 500px;
           }
 
           .content-box {
@@ -159,8 +151,8 @@ const HeroSection = () => {
 
         @media (max-width: 768px) {
           .hero-section-redesign {
-            min-height: auto;
-            padding: 30px 0;
+            min-height: 100vh;
+            padding: 20px 0;
           }
 
           .hero-container {
@@ -168,11 +160,26 @@ const HeroSection = () => {
           }
 
           .hero-grid {
-            gap: 30px;
+            gap: 40px;
+            min-height: 100vh;
+            align-content: start;
+            padding-top: 20px;
+          }
+
+          .image-box {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
 
           .image-box img {
-            max-height: 300px;
+            max-width: 90%;
+            width: 100%;
+          }
+
+          .content-box {
+            padding: 20px 0 40px;
           }
 
           .content-box h1 {
@@ -234,7 +241,7 @@ const HeroSection = () => {
 
             {/* Right Image Box */}
             <div className={`image-box ${isVisible ? 'visible' : ''}`}>
-              <img src="assets/images/hero/slide-1.jpg" alt="Rani Food Industries" />
+              <img src="assets/test.gif" alt="Rani Food Industries" />
             </div>
           </div>
         </div>
