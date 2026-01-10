@@ -38,19 +38,12 @@ export default function Statistics() {
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-12 text-center">
-                            <h2 className="section-title mb-3" style={{ 
-                                color: '#d32f2f', 
-                                fontWeight: 'bold', 
-                                fontSize: '36px' 
-                            }}>
-                                Our Achievements
-                            </h2>
-                            <p className="section-subtitle" style={{ 
-                                fontSize: '16px', 
-                                color: '#666' 
-                            }}>
-                                Numbers that speak for our excellence
-                            </p>
+                            <div className="section-title mb-3">
+                                <h2>Our Achievements</h2>
+                                <p style={{ fontSize: '16px', color: '#666' }}>
+                                    Numbers that speak for our excellence
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div className="row g-4">

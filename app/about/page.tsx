@@ -27,17 +27,21 @@ export default function AboutPage() {
             {/* Two Paragraphs with Equal Height */}
             <div className="row">
               <div className="col-lg-6">
-                <div className="text-box mb-50 wow fadeInLeft" style={{ minHeight: '200px', display: 'flex', alignItems: 'center' }}>
-                  <p style={{ fontWeight: 'bold', fontSize: '16px', lineHeight: '1.8' }}>
-                    Rani Food Industries Limited was founded in Month 19–. Rani Food Industries Limited which is producing high quality of biscuits, cookies and real potato chips. The company has launched two brands which are known as "Gold Mark" and "Ringo". Rani Food Industries Limited makes sure that it produce high quality and delicious products.
-                  </p>
+                <div className="white-bg-container">
+                  <div className="text-box mb-20 wow fadeInLeft" style={{ minHeight: '50px', display: 'flex', alignItems: 'center' }}>
+                    <p style={{ fontWeight: 'bold', fontSize: '16px', lineHeight: '1.8' }}>
+                      Rani Food Industries Limited was founded in Month 19–. Rani Food Industries Limited which is producing high quality of biscuits, cookies and real potato chips. The company has launched two brands which are known as "Gold Mark" and "Ringo". Rani Food Industries Limited makes sure that it produce high quality and delicious products.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="text-box mb-50 wow fadeInRight" style={{ minHeight: '200px', display: 'flex', alignItems: 'center' }}>
-                  <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                    Goldmark has one of the most extensive sales and distribution networks in Bangladesh, with 2,000 sales representatives across all 64 districts of the country. Our products are available at over 5,00,000 retail outlets across Bangladesh. Rani Food Industries Limited was founded in Month 19–. Rani Food Industries Limited is also exporting 1000+ premium products in almost 50+ countries worldwide 
-                  </p>
+                <div className="white-bg-container">
+                  <div className="text-box mb-20 wow fadeInRight" style={{ minHeight: '50px', display: 'flex', alignItems: 'center' }}>
+                    <p style={{  fontWeight: 'bold', fontSize: '16px', lineHeight: '1.8' }}>
+                      Goldmark has one of the most extensive sales and distribution networks in Bangladesh, with 2,000 sales representatives across all 64 districts. Our products are available at over 5,00,000 retail outlets across Bangladesh.  Rani Food Industries Limited is also exporting 1000+ premium products in almost 50+ countries worldwide 
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -73,11 +77,13 @@ export default function AboutPage() {
           </div>
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="text-box mb-50 wow fadeInLeft">
-                <h3 className="mb-3" style={{ fontSize: '24px', fontWeight: '700', color: '#c41e3a' }}>Our Mission</h3>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Our mission is to provide high-quality, delicious food products that bring joy to families across Bangladesh. We are committed to maintaining the highest standards of quality, hygiene, and taste in all our products. Through continuous innovation and dedication to excellence, we strive to be the leading food manufacturer in the region, creating value for our customers, employees, and stakeholders.
-                </p>
+              <div className="white-bg-container">
+                <div className="text-box mb-12 wow fadeInLeft">
+                  <h3 className="mb-3" style={{ fontSize: '24px', fontWeight: '700', color: '#c41e3a' }}>Our Mission</h3>
+                  <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                    Our mission is to provide high-quality, delicious food products that bring joy to families across Bangladesh. We are committed to maintaining the highest standards of quality, hygiene, and taste in all our products. Through continuous innovation and dedication to excellence, we strive to be the leading food manufacturer in the region, creating value for our customers, employees, and stakeholders.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="col-lg-6">
@@ -118,11 +124,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="col-lg-6 order-lg-2 order-1">
-              <div className="text-box mb-50 wow fadeInRight">
-                <h3 className="mb-3" style={{ fontSize: '24px', fontWeight: '700', color: '#c41e3a' }}>Our Vision</h3>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  To become the most trusted and preferred food brand in Bangladesh and beyond, known for our unwavering commitment to quality, innovation, and customer satisfaction. We envision a future where Rani Food Industries Limited products are present in every household, bringing smiles and creating memorable moments for families across the nation.
-                </p>
+              <div className="white-bg-container">
+                <div className="text-box mb-12 wow fadeInRight">
+                  <h3 className="mb-3" style={{ fontSize: '24px', fontWeight: '700', color: '#c41e3a' }}>Our Vision</h3>
+                  <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                    To become the most trusted and preferred food brand in Bangladesh and beyond, known for our unwavering commitment to quality, innovation, and customer satisfaction. We envision a future where Rani Food Industries Limited products are present in every household, bringing smiles and creating memorable moments for families across the nation.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -141,13 +149,15 @@ export default function AboutPage() {
           </div>
           <div className="row">
             <div className="col-lg-12">
-              <div className="text-box mb-50 wow fadeInUp text-center">
-                <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '20px' }}>
-                  Rani Food Industries Limited has established a strong presence in international markets, exporting our premium quality products to various countries. Our commitment to maintaining international quality standards and food safety regulations has enabled us to expand our reach beyond Bangladesh.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  We take pride in representing Bangladesh on the global stage, showcasing the quality and excellence of locally manufactured food products. Our export operations continue to grow as we forge new partnerships and enter new markets, bringing the taste of Bangladesh to the world.
-                </p>
+              <div className="white-bg-container">
+                <div className="text-box mb-12 wow fadeInUp text-center">
+                  <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '20px' }}>
+                    Rani Food Industries Limited has established a strong presence in international markets, exporting our premium quality products to various countries. Our commitment to maintaining international quality standards and food safety regulations has enabled us to expand our reach beyond Bangladesh.
+                  </p>
+                  <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                    We take pride in representing Bangladesh on the global stage, showcasing the quality and excellence of locally manufactured food products. Our export operations continue to grow as we forge new partnerships and enter new markets, bringing the taste of Bangladesh to the world.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

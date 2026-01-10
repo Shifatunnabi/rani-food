@@ -19,7 +19,7 @@ const GallerySection = () => {
     <section className="gallery-section">
       <div
         className="gallery-wrapper-bg bg_cover pt-120 pb-130"
-        style={{ backgroundImage: "url(assets/images/bg/gallery-bg.jpg)" }}
+        style={{ backgroundImage: "url(assets/bg.png)" }}
       >
         <div className="container">
           <div className="row align-items-center">

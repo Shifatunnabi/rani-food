@@ -143,6 +143,41 @@ h6 {
   line-height: 1;
 }
 
+/* Global Section Background */
+section {
+  background-image: url('/assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* White Background Container with Shadow */
+.white-bg-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .white-bg-container {
+    padding: 25px;
+    border-radius: 10px;
+  }
+}
+
+/* Section Title Styling with Shadow */
+.section-title h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title p,
+.section-title .sub-title,
+.section-subtitle {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 /* Flex Center */
 .footer-widget.footer-about-widget ul.social-link li a, .foodix-menu-cart .remove-cart, .sidemenu-wrapper-cart .sidemenu-cart-close, .offer-countdown .simply-countdown .simply-section, .gallery-item.style-one .gallery-img .hover-content, .author-quote-item .quote, .team-item.style-four .member-image ul.social-link li a, .team-item.style-three .member-image .hover-content .social-box .social-link li a, .team-item.style-two .member-info ul.social-link li a, .team-item.style-one .member-image ul.social-link li a, .menu-item.style-eleven .menu-thumbnail .cart-button a, .menu-item.style-nine .menu-button .cart-button, .menu-item.style-five .menu-info .menu-bottom .cart-icon, .menu-item.style-five .menu-thumbnail, .menu-item.style-four .menu-thumbnail .wishlist-btn button, .iconic-info-box.style-three .icon, .iconic-info-box.style-two .icon, .iconic-info-box.style-one .icon, .iconic-box.style-four .icon, .iconic-box.style-three .icon, .iconic-box.style-one .icon, .nav-right-item .cart-button, .foodix-pagination li a, .video-popup {
   display: -webkit-box;
