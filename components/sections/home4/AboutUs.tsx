@@ -64,7 +64,7 @@ export default function AboutUs() {
                                     display: 'flex',
                                     flexDirection: 'column'
                                 }}>
-                                    <div className="icon-wrapper mb-4" style={{
+                                    {/* <div className="icon-wrapper mb-4" style={{
                                         width: '80px',
                                         height: '80px',
                                         margin: '0 auto',
@@ -74,14 +74,14 @@ export default function AboutUs() {
                                         borderRadius: '50%',
                                         border: '2px solid #ddd'
                                     }}>
-                                        {/* Using icon images - placeholder for now, can be replaced with actual icons */}
+                                        
                                         <div style={{
                                             width: '50px',
                                             height: '50px',
                                             backgroundColor: '#d32f2f',
                                             borderRadius: '50%'
                                         }}></div>
-                                    </div>
+                                    </div> */}
                                     <h3 className="card-title mb-3" style={{
                                         color: '#d32f2f',
                                         fontSize: '18px',
