@@ -6,12 +6,35 @@ export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Hide preloader after 500ms
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 500);
+        // Keep preloader visible for minimum 2.5 seconds to ensure smooth loading
+        const minDisplayTime = 2500;
+        const startTime = Date.now();
 
-        return () => clearTimeout(timer);
+        // Wait for both window load and minimum display time
+        const handleLoad = () => {
+            const elapsed = Date.now() - startTime;
+            const remainingTime = Math.max(0, minDisplayTime - elapsed);
+            
+            setTimeout(() => {
+                setIsLoading(false);
+            }, remainingTime);
+        };
+
+        if (document.readyState === 'complete') {
+            handleLoad();
+        } else {
+            window.addEventListener('load', handleLoad);
+        }
+
+        // Fallback: hide after maximum 3 seconds regardless of load state
+        const maxTimer = setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+
+        return () => {
+            window.removeEventListener('load', handleLoad);
+            clearTimeout(maxTimer);
+        };
     }, []);
 
     if (!isLoading) return null;

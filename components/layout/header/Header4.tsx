@@ -83,7 +83,7 @@ export default function Header({
   // Navigation items
   const navItems = [
     { title: 'Home', href: '/' },
-    { title: 'About Us', href: '/about' },
+    { title: 'About', href: '/about' },
     {
       title: 'Products',
       dropdown: [
@@ -110,7 +110,8 @@ export default function Header({
         { label: 'Job Openings', href: '/career/job-opening' },
       ],
     },
-    { title: 'Contact Us', href: '/contact' },
+    { title: 'Catalog', href: '/assets/brochure/Catalog.pdf', external: true },
+    { title: 'Contact', href: '/contact' },
   ];
 
   // Social media links
@@ -145,10 +146,13 @@ export default function Header({
           padding: 0 calc((3 / 16) * 100%);
         }
 
-        /* Top Bar */
+        /* Top Bar - Logo Bar */
         .top-bar {
-          background-color: #BF1109;
-          padding: 8px 0;
+          background-color: white;
+          padding: 10px 0 5px 0;
+          border-top: 6px solid #BF1109;
+          border-left: 6px solid #BF1109;
+          border-right: 6px solid #BF1109;
         }
 
         .top-bar-content {
@@ -156,36 +160,43 @@ export default function Header({
           justify-content: space-between;
           align-items: center;
           gap: 20px;
-          position: relative;
         }
 
-        .brochure-btn {
-          color: white;
-          font-size: 14px;
-          font-weight: 500;
+        .logo-box {
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
           display: flex;
           align-items: center;
-          gap: 8px;
-          transition: all 0.3s ease;
-          background: transparent;
-          border: none;
-          cursor: pointer;
-          text-decoration: none;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+          justify-content: center;
+          flex: 1;
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .brochure-btn:hover {
-          opacity: 0.8;
-          color: white;
+        .logo-box.animated {
+          opacity: 1;
+          transform: translateY(0);
         }
 
-        .brochure-btn:active,
-        .brochure-btn:focus,
-        .brochure-btn:visited {
-          color: white;
-          outline: none;
+        .logo-box.left-logo {
+          transition-delay: 0.1s;
+        }
+
+        .logo-box.center-logo {
+          transition-delay: 0.2s;
+        }
+
+        .logo-box.right-logo {
+          transition-delay: 0.3s;
+        }
+
+        .logo-box img,
+        .logo-box video {
+          max-height: 60px;
+          width: auto;
+          object-fit: contain;
         }
 
         .social-icons {
@@ -205,58 +216,11 @@ export default function Header({
           transform: scale(1.1);
         }
 
-        /* Middle Bar */
-        .middle-bar {
-          background-color: white;
-          padding: 15px 0;
-          border-left: 4px solid #BF1109;
-          border-right: 4px solid #BF1109;
-          border-bottom: 4px solid #c41e3a;
-        }
-
-        .middle-bar-content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .logo-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transform: translateY(-20px);
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .logo-wrapper.animated {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .logo-wrapper.left-logo {
-          transition-delay: 0.1s;
-        }
-
-        .logo-wrapper.center-logo {
-          transition-delay: 0.2s;
-        }
-
-        .logo-wrapper.right-logo {
-          transition-delay: 0.3s;
-        }
-
-        .logo-wrapper img {
-          max-height: 60px;
-          width: auto;
-          object-fit: contain;
-        }
-
         /* Bottom Bar */
         .bottom-bar {
           background-color: #BF1109;
           padding: 0;
-          border-bottom: 3px solid white;
+          //border-bottom: 1px solid white;
         }
 
         .bottom-bar-content {
@@ -271,6 +235,7 @@ export default function Header({
           margin: 0;
           padding: 0;
           gap: 0;
+          justify-content: center;
         }
 
         .nav-item {
@@ -396,10 +361,9 @@ export default function Header({
         .mobile-right {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-end;
           flex: 1;
           gap: 15px;
-          position: relative;
         }
 
         .mobile-brochure-btn {
@@ -410,9 +374,11 @@ export default function Header({
           gap: 5px;
           text-decoration: none;
           white-space: nowrap;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+          transition: all 0.3s ease;
+        }
+
+        .mobile-brochure-btn:hover {
+          opacity: 0.8;
         }
 
         .mobile-brochure-btn:hover,
@@ -424,20 +390,13 @@ export default function Header({
         }
 
         .mobile-social-icons {
-          display: flex;
-          gap: 10px;
-          margin-left: auto;
-        }
-
-        .mobile-social-icons a {
-          color: white;
-          font-size: 14px;
+          display: none;
         }
 
         .mobile-middle-bar {
           display: none;
           background-color: white;
-          padding: 10px 15px;
+          padding: 3px 15px 3px 15px;
           border-left: 3px solid #BF1109;
           border-right: 3px solid #BF1109;
         }
@@ -446,9 +405,17 @@ export default function Header({
           display: flex;
           justify-content: space-between;
           align-items: center;
+          gap: 5px;
         }
 
         .mobile-logo-wrapper {
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
           opacity: 0;
           transform: scale(0.8);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -471,9 +438,11 @@ export default function Header({
           transition-delay: 0.3s;
         }
 
-        .mobile-logo-wrapper img {
-          max-height: 35px;
+        .mobile-logo-wrapper img,
+        .mobile-logo-wrapper video {
+          max-height: 40px;
           width: auto;
+          object-fit: contain;
         }
 
         /* Sidebar */
@@ -603,7 +572,6 @@ export default function Header({
         /* Desktop hidden on mobile */
         @media (max-width: 991px) {
           .top-bar,
-          .middle-bar,
           .bottom-bar {
             display: none;
           }
@@ -652,43 +620,11 @@ export default function Header({
 
       {/* Desktop Navbar */}
       <header className={`custom-navbar ${!isVisible ? 'hidden' : ''}`}>
-        {/* Top Bar - Desktop */}
+        {/* Top Bar - Logo Bar */}
         <div className="top-bar">
           <div className="navbar-container">
             <div className="top-bar-content">
-              <a
-                href="/assets/brochure/Catalog.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="brochure-btn"
-              >
-                <i className="fas fa-download"></i>
-                Product Catalog
-              </a>
-              <div className="social-icons">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Middle Bar - Desktop */}
-        <div className="middle-bar">
-          <div className="navbar-container">
-            <div className="middle-bar-content">
-
-
-              <div className={`logo-wrapper center-logo ${logoAnimated ? 'animated' : ''}`}>
+              <div className={`logo-box left-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
                     src="/assets/images/logo/rani.png"
@@ -700,7 +636,7 @@ export default function Header({
                 </Link>
               </div>
 
-              <div className={`logo-wrapper left-logo ${logoAnimated ? 'animated' : ''}`}>
+              <div className={`logo-box center-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
                     src="/assets/images/logo/goldmark.png"
@@ -712,7 +648,7 @@ export default function Header({
                 </Link>
               </div>
 
-              <div className={`logo-wrapper right-logo ${logoAnimated ? 'animated' : ''}`}>
+              <div className={`logo-box right-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
                     src="/assets/images/logo/ringo.png"
@@ -757,6 +693,11 @@ export default function Header({
                           ))}
                         </div>
                       </>
+                    ) : (item as any).external ? (
+                      <a href={item.href!} target="_blank" rel="noopener noreferrer" className="nav-link">
+                        <i className="fas fa-download"></i>
+                        {item.title}
+                      </a>
                     ) : (
                       <Link href={item.href!} className="nav-link">
                         {item.title}
@@ -789,21 +730,8 @@ export default function Header({
                 className="mobile-brochure-btn"
               >
                 <i className="fas fa-download"></i>
-                <span>Product Catalog</span>
+                <span>Catalog</span>
               </a>
-              <div className="mobile-social-icons">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -894,6 +822,15 @@ export default function Header({
                     ))}
                   </div>
                 </>
+              ) : item.external ? (
+                <a
+                  href={item.href!}
+                  className="sidebar-nav-link"
+                  onClick={closeSidebar}
+                  download
+                >
+                  {item.title} <i className="fas fa-download" style={{ fontSize: '12px', marginLeft: '5px' }}></i>
+                </a>
               ) : (
                 <Link
                   href={item.href!}
@@ -913,7 +850,7 @@ export default function Header({
       <style jsx>{`
         @media (max-width: 991px) {
           .header-spacer {
-            height: 100px !important;
+            height: 90px !important;
           }
         }
       `}</style>
