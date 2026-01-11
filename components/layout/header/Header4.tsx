@@ -199,6 +199,17 @@ export default function Header({
           object-fit: contain;
         }
 
+        .logo-box.center-logo {
+          overflow: hidden;
+          padding: 0 20px;
+        }
+
+        .logo-box.center-logo img {
+          transform: scale(1.03);
+          object-fit: cover;
+          clip-path: inset(0 8% 0 8%);
+        }
+
         .social-icons {
           display: flex;
           gap: 15px;
@@ -445,6 +456,17 @@ export default function Header({
           object-fit: contain;
         }
 
+        .mobile-logo-wrapper:nth-child(2) {
+          overflow: hidden;
+          padding: 0 10px;
+        }
+
+        .mobile-logo-wrapper:nth-child(2) img {
+          transform: scale(1.4);
+          object-fit: cover;
+          clip-path: inset(0 8% 0 8%);
+        }
+
         /* Sidebar */
         .sidebar-overlay {
           position: fixed;
@@ -639,11 +661,12 @@ export default function Header({
               <div className={`logo-box center-logo ${logoAnimated ? 'animated' : ''}`}>
                 <Link href="/">
                   <Image
-                    src="/assets/images/logo/goldmark.png"
+                    src="/assets/gm.gif"
                     alt="Goldmark"
                     width={150}
                     height={60}
                     priority
+                    unoptimized
                   />
                 </Link>
               </div>
@@ -753,11 +776,12 @@ export default function Header({
             <div className={`mobile-logo-wrapper ${logoAnimated ? 'animated' : ''}`}>
               <Link href="/">
                 <Image
-                  src="/assets/images/logo/goldmark.png"
+                  src="/assets/gm.gif"
                   alt="Goldmark"
                   width={100}
                   height={35}
                   priority
+                  unoptimized
                 />
               </Link>
             </div>
@@ -850,7 +874,7 @@ export default function Header({
       <style jsx>{`
         @media (max-width: 991px) {
           .header-spacer {
-            height: 90px !important;
+            height: 60px !important;
           }
         }
       `}</style>
